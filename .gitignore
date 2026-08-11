@@ -1,0 +1,7 @@
+node_modules
+dist
+graphql.d.ts
+.DS_Store
+.attio
+.cursor
+.npmrc
