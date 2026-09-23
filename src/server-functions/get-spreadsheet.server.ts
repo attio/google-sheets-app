@@ -13,7 +13,7 @@ export default async function getSpreadsheet({
     return await googleDriveRequest({
         method: "GET",
         path: `/files/${spreadsheetId}`,
-        query: {fields: "id,name"},
+        query: {fields: "id,name", supportsAllDrives: "true"},
         schema: fileSchema,
     })
 }

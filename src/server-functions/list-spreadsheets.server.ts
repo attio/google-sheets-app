@@ -21,6 +21,14 @@ export default async function listSpreadsheets({
             fields: "files(id,name)",
             orderBy: "modifiedTime desc",
             pageSize: "50",
+            /**
+             * Include items from all drives. This can impact performance but should be fine with the query.
+             * Docs: https://developers.google.com/workspace/drive/api/guides/enable-shareddrives
+             */
+            corpora: "allDrives",
+            spaces: "drive",
+            includeItemsFromAllDrives: "true",
+            supportsAllDrives: "true",
         },
         schema: filesListResponseSchema,
     })
